@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
+import { Route, BrowserRouter } from "react-router-dom";
+import Profile from './pages/Profile';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <div>
+        <Route exact path="/" component={App} />
+        <Route exact path="/profile" component={Profile} />
+      </div>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
