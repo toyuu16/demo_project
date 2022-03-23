@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './pages/app';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
 import { Route, BrowserRouter } from "react-router-dom";
