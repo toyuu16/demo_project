@@ -7,11 +7,23 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import Icon from './icon';
+import { Children } from 'react';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
+
+
 const App = () => {
+
+  const username = () =>{
+  var get = document.getElementById("user")
+  var name = get?.firstChild?.nodeValue
+  
+  console.log(name);
+  };
+  
+  
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -20,12 +32,12 @@ const App = () => {
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
           <Menu.Item key="1" icon={<PieChartOutlined />}>
             Option 1
-            </Menu.Item>
+          </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
             Option 2
-            </Menu.Item>
-          <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-            <Menu.Item key="3">Tom</Menu.Item>
+          </Menu.Item>
+          <SubMenu key="sub1" icon={<UserOutlined />} title="User" >
+            <Menu.Item key="3" id='user' onClick={username} >Tom</Menu.Item>
             <Menu.Item key="4">Bill</Menu.Item>
             <Menu.Item key="5">Alex</Menu.Item>
           </SubMenu>
@@ -35,7 +47,7 @@ const App = () => {
           </SubMenu>
           <Menu.Item key="9" icon={<FileOutlined />}>
             Files
-            </Menu.Item>
+          </Menu.Item>
         </Menu>
       </Sider>
       <Layout className="site-layout">
@@ -47,8 +59,8 @@ const App = () => {
           </Breadcrumb>
           <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
             Bill is a cat.
-            </div>
-            <Icon></Icon>
+          </div>
+          <Icon></Icon>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>
