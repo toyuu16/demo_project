@@ -5,7 +5,7 @@ import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
 import { Route, BrowserRouter } from "react-router-dom";
-import Profile from './pages/Profile';
+import Profile from './pages/profile';
 
 ReactDOM.render(
   <React.StrictMode>
