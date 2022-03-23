@@ -6,20 +6,25 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+import { Children } from 'react';
 import Icon from '../components/icon';
 import { Link } from "react-router-dom";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
+
+
 const App = () => {
 
-  const getUser = () => {
-    var get = document.getElementById("rc-menu-uuid-26868-1-sub1-popup");
-var desplay = get?.firstChild?.firstChild
-    console.log(desplay);
+  const username = () => {
+    var get = document.getElementById("user")
+    var name = get?.firstChild?.nodeValue
 
-  }
+    console.log(name);
+  };
+
+
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -32,8 +37,8 @@ var desplay = get?.firstChild?.firstChild
           <Menu.Item key="2" icon={<DesktopOutlined />}>
             Option 2
           </Menu.Item>
-          <SubMenu  key="sub1" icon={<UserOutlined />} title="User" >
-            <Menu.Item key="3"onClick={getUser}>Tom</Menu.Item>
+          <SubMenu key="sub1" icon={<UserOutlined />} title="User" >
+            <Menu.Item key="3" id='user' onClick={username} >Tom</Menu.Item>
             <Menu.Item key="4">Bill</Menu.Item>
             <Menu.Item key="5">Alex</Menu.Item>
           </SubMenu>
@@ -57,10 +62,10 @@ var desplay = get?.firstChild?.firstChild
             Bill is a cat.
           </div>
           <Icon></Icon>
-        </Content>
+        </Content >
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-      </Layout>
-    </Layout>
+      </Layout >
+    </Layout >
   );
 }
 
