@@ -1,11 +1,27 @@
 import { Button } from 'antd'
 const PrimaryButton = (props: IPrimaryButton) => {
-    const { size, name } = props;
+    const {
+        size = 'middle',
+        name,
+        className,
+        disabled,
+        ghost,
+        action,
+    } = props;
+
     return (
         <>
-            <Button type="primary" size={size}>
+            <Button
+                type="primary"
+                size={size}
+                className={className}
+                disabled={disabled}
+                ghost={ghost}
+                onClick={() => action}
+            >
                 {name}
             </Button>
+
         </>
     )
 };
@@ -13,6 +29,10 @@ const PrimaryButton = (props: IPrimaryButton) => {
 export default PrimaryButton;
 
 interface IPrimaryButton {
-    size: 'large' | 'middle' | 'small';
+    size?: 'large' | 'middle' | 'small';
     name: string;
+    className?: string;
+    disabled?: boolean;
+    ghost?: boolean;
+    action: () => Function;
 }
