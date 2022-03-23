@@ -6,7 +6,7 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import Icon from './icon';
+import Icon from './components/icon';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -48,7 +48,7 @@ const App = () => {
           <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
             Bill is a cat.
             </div>
-            <Icon></Icon>
+          <Icon></Icon>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>
