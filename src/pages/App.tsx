@@ -6,7 +6,8 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import Icon from './components/icon';
+import Icon from '../components/icon';
+import { Link } from "react-router-dom";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -26,7 +27,7 @@ var desplay = get?.firstChild?.firstChild
         <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
           <Menu.Item key="1" icon={<PieChartOutlined />}>
-            Option 1
+            <Link to="/profile">Profile</Link>
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
             Option 2
