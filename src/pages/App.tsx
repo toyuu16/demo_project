@@ -6,8 +6,13 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+<<<<<<< HEAD:src/App.tsx
 import Icon from './icon';
 import { Children } from 'react';
+=======
+import Icon from '../components/icon';
+import { Link } from "react-router-dom";
+>>>>>>> main:src/pages/App.tsx
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -31,7 +36,11 @@ const App = () => {
         <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
           <Menu.Item key="1" icon={<PieChartOutlined />}>
+<<<<<<< HEAD:src/App.tsx
             Option 1
+=======
+            <Link to="/profile">Profile</Link>
+>>>>>>> main:src/pages/App.tsx
           </Menu.Item>
           <Menu.Item key="2" icon={<DesktopOutlined />}>
             Option 2
@@ -59,7 +68,11 @@ const App = () => {
           </Breadcrumb>
           <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
             Bill is a cat.
+<<<<<<< HEAD:src/App.tsx
           </div>
+=======
+            </div>
+>>>>>>> main:src/pages/App.tsx
           <Icon></Icon>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
